@@ -4,7 +4,7 @@ const apiKey = 'AIzaSyCjH1qTmgmJiHjLl7cFooLY1PkU0lYtPpE';
 const range = 'feed!A1:B9'; // Cambia il range a seconda del tuo foglio
 
 // URL per accedere ai dati
-const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${apiKey}`;
+const apiUrl = `https://cors-anywhere.herokuapp.com/https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${apiKey}`;
 
 // Funzione per caricare i dati da Google Sheets
 async function loadGoogleSheetData() {
