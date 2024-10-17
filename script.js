@@ -9,7 +9,7 @@ const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/
 // Funzione per caricare i dati da Google Sheets
 async function loadGoogleSheetData() {
     try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(apiUrl, { mode: 'cors' });
         const data = await response.json();
         const rows = data.values;
 
