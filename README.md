@@ -1,2 +1,0 @@
-# Antica fattoria
- 
