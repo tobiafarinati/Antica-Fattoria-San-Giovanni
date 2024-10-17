@@ -1,11 +1,11 @@
 @font-face {
     font-family: "P22";
-    src: url('/font/P22MayflowerRegular.ttf') format('TrueType');
+    src: url('font/P22MayflowerRegular.woff');
 }
 
 @font-face {
     font-family: "Nudles";
-    src: url('/font/Nudles-Regular.ttf') format('TrueType');
+    src: url('font/Nudles-Regular.woff');
 }
 
 html {
