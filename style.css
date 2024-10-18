@@ -300,6 +300,12 @@ a {
     margin-top: 0px;
 }
 
+.item2fr:last-child {
+    width: 100%;
+    margin-bottom: 8px;
+    margin-top: 0px;
+}
+
 .item2fr>img {
     width: 100%;
     height: auto;
@@ -444,10 +450,11 @@ a {
         border: 1px solid black;
     }
 
-    .item-divide img:last-child {
+    .item-divide > img:last-of-type {
         width: 100%;
         margin-bottom: 60px;
     }
+
 }
 
 
