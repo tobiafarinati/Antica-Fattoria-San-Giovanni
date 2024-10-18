@@ -49,28 +49,57 @@ document.addEventListener('DOMContentLoaded', loadGoogleSheetData);
 
 
 
-//HEADER HEIGHT
-// Function to set the top margin and height of .container-divide dynamically
+//HEADER HEIGHT and drop down
+// Function to set the top margin, height of .container-divide, and position of dropdown content dynamically
 function setContainerHeight() {
-    const headerHeight = document.querySelector('.fixed-header').offsetHeight;
+    const header = document.querySelector('.fixed-header');
+    const headerHeight = header.offsetHeight;
+    const additionalMargin = 1; // Adjust this based on what you find
     const containerDivide = document.querySelector('.main-content');
-    
+    const dropdownContent = document.querySelector('.dropdown-content, .dropdown-content-index');
+
     // Set the margin-top to start after the header
     containerDivide.style.marginTop = `${headerHeight}px`;
-    
+
+    dropdownContent.style.marginTop = `${headerHeight - additionalMargin}px`;
+
+        // Log values to check in console
+        console.log('Header Height:', headerHeight);
+        console.log('Dropdown Margin Top:', dropdownContent.style.marginTop);
+        console.log('Dropdown computed margin:', getComputedStyle(dropdownContent).marginTop);
+
+
     // Set the height to fill the remaining viewport
     containerDivide.style.height = `calc(100vh - ${headerHeight}px - 8px)`; // Subtract 8px for any extra padding/margin
 }
 
-// Set height when the page loads
-window.addEventListener('DOMContentLoaded', setContainerHeight);
+// Set height and dropdown alignment when the page loads
+window.addEventListener('load', setContainerHeight);
 
-// Recalculate height when the window is resized
+// Recalculate height and dropdown alignment when the window is resized
 window.addEventListener('resize', setContainerHeight);
 
 
 
 
+// DROPDOWN FOR ALL DEVICES
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownContent = document.querySelector('.dropdown-content, .dropdown-content-index');
+
+    dropdown.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevents click event from bubbling up to the document
+        // Toggle the dropdown visibility
+        dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+    });
+
+    // Close the dropdown if clicking outside
+    document.addEventListener('click', function() {
+        dropdownContent.style.display = 'none'; // Hide the dropdown
+    });
+});
+
+  
 
 
 // https://docs.google.com/spreadsheets/d/1ykQ5NBqD2L8e7FMbsYgcUnaefLhFzIpCsVfyDKJ74Tk/edit?gid=0#gid=0
