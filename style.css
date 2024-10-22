@@ -55,7 +55,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'P22', serif;
+    font-family: 'nudles', serif;
     font-size: 20px;
     line-height: 22px;
     margin: 0;
@@ -72,6 +72,7 @@ a.text {
     color: black;
     display: inline-block;
     word-wrap: break-word;
+    font-style: italic;
 }
 
 a.text:hover {
@@ -98,6 +99,15 @@ a {
     color: black;
 }
 
+.item-divide > p > a {
+    color: #9E8194;
+    display: inline-block;
+}
+.item-divide > p > a:hover {
+    color: black;
+    cursor: pointer;
+}
+
 .fixed-header :hover {
     cursor: pointer;
     color: #9E8194;
@@ -114,7 +124,7 @@ a {
     height: auto;
     /* Adjust height as needed */
     display: grid;
-    grid-template-columns: calc(50vw - 12px) repeat(4, 1fr);
+    grid-template-columns: calc(50vw - 8px) repeat(4, 1fr);
     /* Adjusted to account for 8px gaps */
     grid-auto-rows: auto;
     /* Allow rows to grow independently */

@@ -1,7 +1,7 @@
 // Imposta il tuo Sheet ID e la chiave API
 const sheetID = '1ykQ5NBqD2L8e7FMbsYgcUnaefLhFzIpCsVfyDKJ74Tk';
 const apiKey = 'AIzaSyCjH1qTmgmJiHjLl7cFooLY1PkU0lYtPpE';
-const range = 'feed!A1:B9'; // Cambia il range a seconda del tuo foglio
+const range = 'feed!A1:A9'; // Cambia il range a seconda del tuo foglio
 
 // URL per accedere ai dati
 const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${apiKey}`;
@@ -18,18 +18,23 @@ async function loadGoogleSheetData() {
 
         // Loop per aggiungere ogni item della griglia
         rows.forEach(row => {
-            const [imageUrl, description] = row; // Estrai dati dalla riga
+            const [imageUrl] = row; // Estrai dati dalla riga
+
+            // const [imageUrl, description] = row; // Estrai dati dalla riga
 
             // Crea un elemento della griglia
             const gridItem = document.createElement('div');
             gridItem.classList.add('grid-item');
 
             // Verifica se imageUrl e description sono definiti e non vuoti
-            if (imageUrl && description) {
+            if (imageUrl) {
+                // if (imageUrl && description) {
                 // Inserisci immagine e testo
                 gridItem.innerHTML =
-                    `<img src="${imageUrl}">
-                    <h1>${description}</h1>`;
+                    `<img src="${imageUrl}">`;
+
+                    // `<img src="${imageUrl}">
+                    // <h1>${description}</h1>`;
             } else {
                 // Se la riga è vuota, lascia il gridItem vuoto
                 gridItem.innerHTML = ''; // Questo è opzionale, poiché è già vuoto per default
