@@ -69,10 +69,5 @@ window.addEventListener('load', setContainerHeight);
 // Recalculate height and dropdown alignment when the window is resized
 window.addEventListener('resize', setContainerHeight);
 
-  //TARGET BLANK FOR EVERY LINK
-document.querySelectorAll('a').forEach(function(link) {
-    link.setAttribute('target', '_blank');
-});
-
 
 // https://docs.google.com/spreadsheets/d/1ykQ5NBqD2L8e7FMbsYgcUnaefLhFzIpCsVfyDKJ74Tk/edit?gid=0#gid=0
