@@ -90,7 +90,7 @@ a.text:hover {
 a {
     font-family: 'Nudles', serif;
     font-size: 18px;
-    line-height: 20px;
+    line-height: 22px;
     margin: 0;
     display: flex;
     flex-direction: row;
@@ -115,7 +115,6 @@ a {
     /* Adjust height as needed */
     display: grid;
     grid-template-columns: calc(50vw - 12px) repeat(4, 1fr);
-    ;
     /* Adjusted to account for 8px gaps */
     grid-auto-rows: auto;
     /* Allow rows to grow independently */
@@ -141,82 +140,49 @@ a {
     /* Dynamically fill space below header */
 }
 
-/*DROPDOWN MENU*/
-.dropbtn {
-    font-family: 'Nudles', serif;
-    font-size: 18px;
-    line-height: 20px;
-    margin: 0;
+/*FOOTER*/
+.scrolling-footer {
+    width: calc(100vw - 16px);
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: white;
+    border-top: 1px solid black;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    left: 8px;
+    height: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
-
-.dropdown {
-    position: relative;
+  
+  .scrolling-content {
     display: inline-block;
-}
+    padding-left: calc(100vw - 16px);
+    animation: scroll 80s linear infinite;
+  }
 
-.dropdown-content {
-    margin-top: 4px;
-    display: none;
-    /* Initially hidden */
-    position: absolute;
-    background-color: white;
-    min-width: calc(50vw);
-    z-index: 10;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
-    left: calc(50vw - 9px);
-}
+  .scrolling-content a {
+    display: inline;
+    padding-right: 30px;
+  }
 
-.dropdown-content-index {
-    margin-top: 4px;
-    display: none;
-    /* Initially hidden */
-    position: absolute;
-    background-color: white;
-    min-width: calc(50vw);
-    z-index: 10;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
-    left: calc(50vw - 4px);
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 8px 16px;
-    display: block;
-    text-decoration: none;
-    border-bottom: 1px solid black;
-}
-
-.dropdown-content-index a {
-    color: black;
-    padding: 8px 16px;
-    display: block;
-    text-decoration: none;
-    border-bottom: 1px solid black;
-}
-
-.dropdown-content a:last-child {
-    border-bottom: 0;
-    /* No border on the last item */
-}
-
-.dropdown-content-index a:last-child {
-    border-bottom: 0;
-    /* No border on the last item */
-}
-
-.dropdown-content a:hover {
+  .scrolling-content a:hover {
     cursor: pointer;
     color: #9E8194;
-}
+  }
 
-.dropdown-content-index a:hover {
-    cursor: pointer;
-    color: #9E8194;
-}
+
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
 
 /*GRIGLIA IMMAGINI*/
 .grid-container {
@@ -233,6 +199,11 @@ a {
     z-index: -1;
     width: 100%;
     margin-bottom: 80px;
+}
+.grid-item:last-child {
+    z-index: -1;
+    width: 100%;
+    margin-bottom: 117px;
 }
 
 .grid-item>img {
@@ -261,7 +232,7 @@ a {
     width: 100%;
     border-right: 1px solid black;
     padding-top: 8px;
-    padding-bottom: 0px;
+    padding-bottom: 8px;
     padding-right: 8px;
     padding-left: 0px;
     overflow-y: auto;
