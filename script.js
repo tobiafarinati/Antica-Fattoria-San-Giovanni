@@ -65,7 +65,7 @@ function setContainerHeight() {
 
 
     // Set the height to fill the remaining viewport
-    containerDivide.style.height = `calc(100vh - ${headerHeight}px - 40px)`; // Subtract 8px for any extra padding/margin
+    containerDivide.style.height = `calc(100vh - ${headerHeight}px - 38px)`; // Subtract 8px for any extra padding/margin
 }
 
 // Set height and dropdown alignment when the page loads
@@ -76,3 +76,17 @@ window.addEventListener('resize', setContainerHeight);
 
 
 // https://docs.google.com/spreadsheets/d/1ykQ5NBqD2L8e7FMbsYgcUnaefLhFzIpCsVfyDKJ74Tk/edit?gid=0#gid=0
+
+
+/* function updatePadding() {
+    const scrollingContent = document.querySelector('.scrolling-content');
+    const viewportWidth = window.innerWidth;
+    scrollingContent.style.paddingLeft = `${viewportWidth - 16}px`;
+}
+
+// Initial call to set padding on load
+updatePadding();
+
+// Update padding when window is resized
+window.addEventListener('resize', updatePadding);
+ */
