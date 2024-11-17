@@ -1,7 +1,7 @@
 // Imposta il tuo Sheet ID e la chiave API
 const sheetID = '1ykQ5NBqD2L8e7FMbsYgcUnaefLhFzIpCsVfyDKJ74Tk';
 const apiKey = 'AIzaSyCjH1qTmgmJiHjLl7cFooLY1PkU0lYtPpE';
-const range = 'feed!A1:A9'; // Cambia il range a seconda del tuo foglio
+const range = 'feed!A1:A7'; // Cambia il range a seconda del tuo foglio
 
 // URL per accedere ai dati
 const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${range}?key=${apiKey}`;
@@ -60,6 +60,7 @@ function setContainerHeight() {
     const header = document.querySelector('.fixed-header');
     const headerHeight = header.offsetHeight;
     const containerDivide = document.querySelector('.main-content');
+    
     // Set the margin-top to start after the header
     containerDivide.style.marginTop = `${headerHeight}px`;
 

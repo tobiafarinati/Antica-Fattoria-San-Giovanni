@@ -40,7 +40,8 @@ body {
 
 p {
     font-family: 'P22', serif;
-    font-size: 15px;
+    font-size: 14px;
+    letter-spacing: -1.2px;
     line-height: 22px;
     margin: 0;
     -webkit-text-stroke-width: 0.5px;
@@ -48,19 +49,22 @@ p {
 }
 
  .container2fr-txt > p{
-    font-size: 12px;
+    font-size: 11px;
     line-height: 16px;
+    letter-spacing: -1px;
  }
 
  .container2fr-txt > h2{
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -1.2px;
  }
 
 h2 {
     font-family: 'P22', serif;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 22px;
+    letter-spacing: -1.2px;
     margin: 0;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: black;
@@ -68,18 +72,27 @@ h2 {
 
 a {
     font-family: 'Nudles', serif;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 22px;
     margin: 0;
-
     text-decoration: none;
     color: black;
 }
 
+.mobile {
+    display: none;
+}
+
+.mobile-space {
+    display: none;
+    height: 32px;
+}
+
 .item-divide>p>a {
     font-family: 'P22', serif;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 22px;
+    letter-spacing: -1.2px;
     margin: 0;
     text-decoration: underline;
     -webkit-text-stroke-width: 0.5px;
@@ -123,6 +136,7 @@ a {
     box-sizing: border-box;
 }
 
+
 .item {
     grid-column: 1 / 2;
     width: 100%;
@@ -146,7 +160,7 @@ a {
     bottom: 0;
     left: 8px;
     height: auto;
-    padding-top: 6px;
+    padding-top: 8px;
     padding-bottom: 6px;
     overflow-x: hidden; /* Only hide horizontal overflow */
 }
@@ -252,13 +266,20 @@ a {
     width: 100%;
 }
 
-.item-divide:first-child>.box-1>img {
+.box-2 {
+    margin-top: -30px;
+    padding-bottom: -80px;
+}
+
+.item-divide:first-child>.box-1>.grid-container>.grid-item>img {
     width: 100%;
     margin-bottom: 3px;
     padding-top: 25px;
     padding-bottom: 25px;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 15%;
+    padding-right: 15%;
+    max-height: 40vw;
+    object-fit: contain;
 }
 
 .item-divide>img:last-child {
@@ -301,7 +322,36 @@ a {
     height: auto;
 }
 
-@media (max-width: 850px) {
+/* @media (max-width: 1200px) {
+    .item-divide:first-child>.box-1>.grid-container>.grid-item>img {
+        width: 100%;
+        margin-bottom: 3px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 70px;
+        padding-right: 70px;
+        max-height: 350px;
+        object-fit: contain;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .item-divide:first-child>.box-1>.grid-container>.grid-item>img {
+        width: 100%;
+        margin-bottom: 3px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 70px;
+        padding-right: 70px;
+        max-height: 350px;
+        object-fit: contain;
+    }
+
+} */
+
+
+@media (max-width: 750px) {
     .fixed-header {
         grid-template-columns: calc(50vw - 12px) calc(50vw - 12px);
         /* First item 50%, next two 25% */
@@ -370,12 +420,32 @@ a {
         margin-bottom: 60px;
     }
  */
+
+ .mobile-space {
+    display: block;
+}
+
+.mobile {
+    display: block;
+}
+
+
+.item-divide:first-child>.box-1>.grid-container>.grid-item>img {
+    width: 100%;
+    margin-bottom: 3px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 15%;
+    padding-right: 15%;
+    max-height: 80vw;
+    object-fit: contain;
+}
 }
 
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -387,4 +457,23 @@ a {
         grid-auto-rows: auto;
         /* Allow rows to grow independently */
     }
+
+    .mobile {
+        display: block;
+    }
+
+    .mobile-space {
+        display: block;
+    }
+
+/*     .item-divide:first-child>.box-1>.grid-container>.grid-item>img {
+        width: 100%;
+        margin-bottom: 3px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 70px;
+        padding-right: 70px;
+        max-height: 350px;
+        object-fit: contain;
+    } */
 }
