@@ -88,6 +88,12 @@ a {
     height: 32px;
 }
 
+.gif{
+    margin-top: -35px;
+    margin-bottom: -35px; 
+
+}
+
 .item-divide>p>a {
     font-family: 'P22', serif;
     font-size: 14px;
@@ -259,7 +265,6 @@ a {
 
 .item-divide>img {
     width: 100%;
-    margin-bottom: 3px;
 }
 
 .box-1 {
@@ -476,4 +481,10 @@ a {
         max-height: 350px;
         object-fit: contain;
     } */
+
+    .gif{
+        margin-top: -20px;
+        margin-bottom: -20px; 
+    
+    }
 }
