@@ -89,7 +89,7 @@ a {
 }
 
 .gif{
-    margin-top: -35px;
+    margin-top: -30px;
     margin-bottom: -35px; 
 
 }
@@ -127,7 +127,7 @@ a {
     height: auto;
     /* Adjust height as needed */
     display: grid;
-    grid-template-columns: calc(50vw - 8px) repeat(4, 1fr);
+    grid-template-columns: calc(50vw - 8px) repeat(5, 1fr);
     /* Adjusted to account for 8px gaps */
     grid-auto-rows: auto;
     /* Allow rows to grow independently */
@@ -150,8 +150,9 @@ a {
 }
 
 .main-content {
-    height: calc(100vh - [header-height]);
+    height: calc(100vh - 38px);
     /* Dynamically fill space below header */
+    padding-top: 38px;
 }
 
 /*FOOTER*/
@@ -327,36 +328,15 @@ a {
     height: auto;
 }
 
-/* @media (max-width: 1200px) {
-    .item-divide:first-child>.box-1>.grid-container>.grid-item>img {
-        width: 100%;
-        margin-bottom: 3px;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        padding-left: 70px;
-        padding-right: 70px;
-        max-height: 350px;
-        object-fit: contain;
-    }
-
-}
-
-@media (max-width: 900px) {
-    .item-divide:first-child>.box-1>.grid-container>.grid-item>img {
-        width: 100%;
-        margin-bottom: 3px;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        padding-left: 70px;
-        padding-right: 70px;
-        max-height: 350px;
-        object-fit: contain;
-    }
-
-} */
-
 
 @media (max-width: 750px) {
+
+    .main-content {
+        height: calc(100vh - 138px);
+        /* Dynamically fill space below header */
+        padding-top: 138px;
+    }
+
     .fixed-header {
         grid-template-columns: calc(50vw - 12px) calc(50vw - 12px);
         /* First item 50%, next two 25% */
@@ -399,6 +379,13 @@ a {
         /* Second row */
     }
 
+    .item6 {
+        grid-column: 2;
+        /* Third column */
+        grid-row: 5;
+        /* Second row */
+    }
+
     .container-divide {
         display: block;
         /* Stack items vertically */
@@ -419,12 +406,6 @@ a {
         padding-left: 0;
         border-top: 1px solid black;
     }
-/* 
-    .item-divide>img:last-of-type {
-        width: 100%;
-        margin-bottom: 60px;
-    }
- */
 
  .mobile-space {
     display: block;
@@ -447,9 +428,6 @@ a {
 }
 }
 
-
-
-
 @media (max-width: 500px) {
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
@@ -470,17 +448,6 @@ a {
     .mobile-space {
         display: block;
     }
-
-/*     .item-divide:first-child>.box-1>.grid-container>.grid-item>img {
-        width: 100%;
-        margin-bottom: 3px;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        padding-left: 70px;
-        padding-right: 70px;
-        max-height: 350px;
-        object-fit: contain;
-    } */
 
     .gif{
         margin-top: -20px;
