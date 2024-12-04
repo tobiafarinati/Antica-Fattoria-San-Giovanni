@@ -142,7 +142,6 @@ a {
     box-sizing: border-box;
 }
 
-
 .item {
     grid-column: 1 / 2;
     width: 100%;
@@ -208,7 +207,7 @@ a {
     padding-top: 0px;
     margin-top: 0px;
     column-gap: 8px;
-    row-gap: 4px;
+    row-gap: 0px;
     grid-template-columns: repeat(1, 1fr);
 }
 
@@ -224,17 +223,6 @@ a {
     width: 100%;
     height: auto;
 }
-
-
-.symbol {
-    position: fixed;
-    z-index: 10;
-    margin-top: 50vh;
-    margin-left: 50vw;
-    width: 70px;
-    transform: translate(-60%, -100%);
-}
-
 
 
 /*griglia*/
@@ -277,7 +265,7 @@ a {
     padding-bottom: -80px;
 }
 
-.item-divide:first-child>.box-1>.grid-container>.grid-item>img {
+/* .item-divide:first-child>.box-1>.grid-container>.grid-item>img {
     width: 100%;
     margin-bottom: 3px;
     padding-top: 25px;
@@ -287,7 +275,7 @@ a {
     max-height: 40vw;
     object-fit: contain;
 }
-
+ */
 .item-divide>img:last-child {
     width: 100%;
     margin-bottom: -5px;
