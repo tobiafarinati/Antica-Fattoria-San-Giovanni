@@ -404,7 +404,7 @@ a {
 }
 
 
-.item-divide:first-child>.box-1>.grid-container>.grid-item>img {
+/* .item-divide:first-child>.box-1>.grid-container>.grid-item>img {
     width: 100%;
     margin-bottom: 3px;
     padding-top: 25px;
@@ -413,7 +413,7 @@ a {
     padding-right: 15%;
     max-height: 80vw;
     object-fit: contain;
-}
+} */
 }
 
 @media (max-width: 500px) {
